@@ -1,0 +1,10 @@
+.scroll-container {
+    height: 100%;
+    min-width: 100px;
+    overflow: scroll;
+}
+
+.load-indicator {
+    min-height: 150px;
+    font-size: 2em;
+}
