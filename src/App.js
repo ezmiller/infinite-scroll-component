@@ -41,8 +41,7 @@ class App extends Component {
 
   getNextData = () => {
     if (this.state.loading) {
-      console.log('already loading...');
-      return;
+    return;
     }
 
     this.fetchRepoData(this.state.nextPage).then(data => this.setState({
@@ -59,9 +58,9 @@ class App extends Component {
       <div className="App" style={{ height: '100vh' }}>
         <InfiniteScroll
           data={repos}
-          loader={this.getNextData}
+          loadMore={this.getNextData}
           threshold={100}
-          loading={true}
+          loading={loading}
         >
           {({data, loading}) => {
             const rows = data.map(({
